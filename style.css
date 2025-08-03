@@ -1,0 +1,197 @@
+body {
+  background-image: url('emmaimg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+img {
+  width: 200px; /* or whatever fits */
+  height: auto;
+}
+html {
+  overflow-y: scroll;
+}
+* {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Header Section */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #007cf0, #00dfd8);
+  color: rgb(128, 34, 34);
+  border-radius: 12px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 200;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 25px;
+  font-size: 1.1rem;
+}
+
+.cta .btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background-color: #111;
+  transition: 0.3s;
+}
+
+.cta .btn:hover {
+  background-color: #333;
+}
+
+.cta .btn.outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.cta .btn.outline:hover {
+  background: white;
+  color: #111;
+}
+
+/* Section Titles */
+section {
+  margin-top: 60px;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-left: 5px solid #00dfd8;
+  padding-left: 10px;
+}
+
+/* About, Skills, Contact */
+.about p,
+.skills ul li,
+.contact p {
+  max-width: 800px;
+  margin: 10px auto;
+  font-size: 1rem;
+}
+
+.skill-category {
+  margin: 20px 0;
+  padding: 0 20px;
+}
+
+.skill-category ul {
+  list-style: none;
+}
+
+.skill-category li {
+  margin: 6px 0;
+}
+
+/* Projects */
+.projects .project {
+  background-color: #f0f0f0;
+  margin: 15px auto;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.projects .project h3 {
+  margin-bottom: 10px;
+}
+
+.projects .project a {
+  text-decoration: none;
+  margin-right: 15px;
+  color: #007cf0;
+  font-weight: bold;
+}
+
+.projects a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Form */
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form textarea {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  padding: 12px;
+  background-color: #007cf0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #005fcc;
+}
+
+.contact-details {
+  list-style: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact-details li {
+  margin: 5px 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 60px;
+  padding: 30px 20px;
+  background-color: #111;
+  color: white;
+  border-radius: 10px;
+}
+
+footer a {
+  color: #00dfd8;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+ 
