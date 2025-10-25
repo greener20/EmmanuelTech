@@ -166,14 +166,18 @@
   <section class="contact" id="contact">
     <h2>Get In Touch</h2>
     <p>Have a project in mind or want to collaborate? I'd love to hear from you. Let's create something amazing together!</p>
- <form action="https://formspree.io/f/xgvlqynp" method="POST">
+      <p id="success" style="display:none; color:green;">
+  ✅ Message sent successfully!
+</p>
+
+ <form id="myForm" action="https://formspree.io/f/xgvlqynp" method="POST">
   <input type="text" name="name" placeholder="Your Name *" required />
   <input type="email" name="email" placeholder="Your Email *" required />
   <input type="text" name="subject" placeholder="Subject *" required />
   <textarea name="message" placeholder="Your Message *" rows="5" required></textarea>
 
   <input type="hidden" name="_subject" value="New message from Portfolio">
-  <input type="hidden" name="_redirect" value="https://google.com">
+ 
 
   <button type="submit">Send Message</button>
 </form>
@@ -191,6 +195,20 @@
     <p>Made with 💻 and lots of coffee ☕</p>
     <p><a href="#about">About</a> | <a href="#skills">Skills</a> | <a href="#projects">Projects</a> | <a href="#contact">Contact</a></p>
   </footer>
+  <script>
+  const form = document.getElementById('myForm');
+  const successMsg = document.getElementById('success');
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const res = await fetch(form.action, { method: "POST", body: data });
+    if (res.ok) {
+      successMsg.style.display = "block";
+      form.reset();
+    }
+  });
+</script>
 
 </body>
 </html>
