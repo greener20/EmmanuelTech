@@ -166,10 +166,7 @@
   <section class="contact" id="contact">
     <h2>Get In Touch</h2>
     <p>Have a project in mind or want to collaborate? I'd love to hear from you. Let's create something amazing together!</p>
-     <p id="success" style="display:none; color:green;">
-  ✅ Message sent successfully!
-</p>
-
+    
 <form id="myForm" action="https://formspree.io/f/xgvlqynp" method="POST">
   <input type="text" name="name" placeholder="Your Name *" required />
   <input type="email" name="email" placeholder="Your Email *" required />
@@ -180,7 +177,9 @@
 
   <button type="submit">Send Message</button>
 </form>
-
+    <p id="success" style="display:none; color:green;">
+       ✅ Message sent successfully!
+    </p>
 
     <ul class="contact-details">
       <li>Email: fineaksrelance@gmail.com</li>
@@ -202,13 +201,21 @@
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const data = new FormData(form);
-    const res = await fetch(form.action, { method: "POST", body: data });
+
+    const res = await fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
     if (res.ok) {
       successMsg.style.display = "block";
       form.reset();
+      successMsg.scrollIntoView({ behavior: "smooth" });
     }
   });
 </script>
+
 
 </body>
 </html>
