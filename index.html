@@ -194,27 +194,7 @@
     <p>Made with 💻 and lots of coffee ☕</p>
     <p><a href="#about">About</a> | <a href="#skills">Skills</a> | <a href="#projects">Projects</a> | <a href="#contact">Contact</a></p>
   </footer>
-  <script>
-  const form = document.getElementById('myForm');
-  const successMsg = document.getElementById('success');
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const data = new FormData(form);
-
-    const res = await fetch(form.action, {
-      method: "POST",
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
-
-    if (res.ok) {
-      successMsg.style.display = "block";
-      form.reset();
-      successMsg.scrollIntoView({ behavior: "smooth" });
-    }
-  });
-</script>
+ 
 
 
 </body>
